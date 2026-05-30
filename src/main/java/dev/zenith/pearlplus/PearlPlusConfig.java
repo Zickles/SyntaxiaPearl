@@ -29,7 +29,7 @@ public class PearlPlusConfig {
         public boolean enabled = true;
         public boolean temporaryMode = false;
         public boolean distanceCheck = false;
-        public int temporaryRemovalRange = 32; //blocks
+        public int temporaryRemovalRange = 64; //blocks
     }
 
     public static final class PlayerPearls {
@@ -43,6 +43,8 @@ public class PearlPlusConfig {
         public int x;
         public int y;
         public int z;
+        public int relX;
+        public int relZ;
     }
 
     public static final class HomePosition {

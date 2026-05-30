@@ -27,6 +27,8 @@ public class PearlPlusPlugin implements ZenithProxyPlugin {
         LOG = pluginAPI.getLogger();
         LOG.info("SyntaxPearl Plugin loading...");
         PLUGIN_CONFIG = API.registerConfig(BuildConstants.PLUGIN_ID, PearlPlusConfig.class);
+        ChamberLookup.load();
+        PearlManager.backfillRelativeCoords();
         API.registerCommand(new PearlPlusCommand());
         API.registerModule(new AutoLoadModule());
         API.registerModule(new AutoDetectModule());
